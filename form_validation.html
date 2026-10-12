@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Form Validation</h3>
+    <form action="" name="myform" onsubmit="return validate();">
+        <label for="">Email:</label>
+        <input type="text" name="email"><br><br>
+        <input type="submit" name="Submit">
+    </form>
+    <script>
+        function validate(){
+            let email = document.myform.email.value
+        
+            // alert ("you have submited");
+            let pattern = /^[a-z]+@[a-z]+\.[a-z]{2,4}/;
+            // if (email.search(pattern)==-1){
+            //     alert("invlid Email Address");
+            //     return false;
+            // } else {
+            //     alert ("Valid Email");
+            // }
+            console.log(email.search(pattern));
+            return false;
+        }
+    </script>
+</body>
+</html>
